@@ -1,18 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from './ui/button'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 const Header = () => {
   return (
     <>
-    <nav className='py-4 flex justify-between items-center'>
+      <nav className="py-4 flex justify-between items-center">
         <Link>
-        <img src="/logo (1).png" alt="logo" className='h-20' />
+          <img src="/logo (1).png" alt="logo" className="h-20" />
         </Link>
         <Button variant="outline">Login</Button>
-    </nav>
+        {/* <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn> */}
+      </nav>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
