@@ -46,6 +46,10 @@ const App = () => {
           path: "/onboarding",
           element: <OnBoarding />,
         },
+        {
+          path:"/jobs",
+          element:<Job/>
+        }
       ],
     },
   ]);
