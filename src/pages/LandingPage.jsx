@@ -29,7 +29,7 @@ const LandingPage = () => {
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20">
       <section className="text-center">
-        <h1 className="flex flex-col items-center justify-center bg-gradient-to-br from-gray-500 via-gray-200 to-white text-transparent bg-clip-text text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter ">
+        <h1 className="flex flex-col items-center justify-center bg-gradient-to-br from-gray-500 via-gray-200 to-white text-transparent bg-clip-text text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tighter py-4 ">
           Find Your Dream Job{" "}
           <span className="flex items-center gap-2 sm:gap-6">
             and get{" "}
@@ -44,7 +44,7 @@ const LandingPage = () => {
           Explore thousands of job listings or find the perfect candidate.
         </p>
       </section>
-      <div className="flex  justify-center gap-6">
+      <div className="flex gap-6 justify-center ">
         <Link to="/jobs">
           <Button variant="blue" size="xl">
             Find Jobs
@@ -78,6 +78,7 @@ const LandingPage = () => {
           })}
         </CarouselContent>
       </Carousel>
+      
       <img src="/banner.jpeg" alt="banner" className="w-full" />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
