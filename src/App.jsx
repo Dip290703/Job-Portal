@@ -11,6 +11,7 @@ import PostJob from "./pages/PostJob";
 import MyJobs from "./pages/MyJobs";
 import OnBoarding from "./pages/OnBoarding";
 import { ThemeProvider } from "./components/ui/ThemeProvider";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const App = () => {
@@ -24,31 +25,47 @@ const App = () => {
         },
         {
           path: "/job/:id",
-          element: <Job />,
+          element: 
+         ( <ProtectedRoute><Job /></ProtectedRoute>),
+          
         },
         {
           path: "/savedjobs",
-          element: <SavedJobs />,
+          element:
+       (    <ProtectedRoute><SavedJobs /></ProtectedRoute>),
+          
         },
         {
           path: "/joblisting",
-          element: <JobListing />,
+          element:
+          ( <ProtectedRoute><JobListing /></ProtectedRoute>),
+          
         },
         {
           path: "/postjobs",
-          element: <PostJob />,
+          element:
+          ( <ProtectedRoute> <PostJob /></ProtectedRoute>),
+         
         },
         {
           path: "/myjobs",
-          element: <MyJobs />,
+          element:
+           (<ProtectedRoute> <MyJobs /></ProtectedRoute>),
+         
         },
         {
           path: "/onboarding",
-          element: <OnBoarding />,
+          element: 
+           (<ProtectedRoute> <OnBoarding /></ProtectedRoute>),
+     
         },
         {
           path:"/jobs",
-          element:<Job/>
+          element:
+           (<ProtectedRoute>
+            <Job/>
+           </ProtectedRoute>
+          )
         }
       ],
     },
