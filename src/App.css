@@ -22,3 +22,8 @@
     height: 100%;
     background: radial-gradient(circle,transparent,rgba(0,0,0,0.0));
 }
+.custom-user-button img {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 9999px; /* Makes it rounded */
+}
