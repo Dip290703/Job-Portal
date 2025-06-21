@@ -1,4 +1,5 @@
 import { getJobs } from "@/api/apiJobs";
+import JobCard from "@/components/JobCard";
 import useFetch from "@/hooks/use-fetch";
 import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
@@ -38,11 +39,11 @@ const Job = () => {
     } 
     {
       loadingJobs === false && (
-        <div className="">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {
              jobs?.length ? (
               jobs.map((job) => {
-                return <span>{job.title}</span>
+                return <JobCard  job={job} key={job.id} />
               })
              ):(
               <div>no jobs</div>
