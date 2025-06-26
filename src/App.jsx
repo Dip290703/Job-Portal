@@ -25,8 +25,8 @@ const App = () => {
         },
         {
           path: "/job/:id",
-          element: 
-         ( <ProtectedRoute><Job /></ProtectedRoute>),
+          element: //jobpage
+         ( <ProtectedRoute><JobListing /></ProtectedRoute>),
           
         },
         {
@@ -61,7 +61,7 @@ const App = () => {
         },
         {
           path:"/jobs",
-          element:
+          element:///joblisting
            (<ProtectedRoute>
             <Job/>
            </ProtectedRoute>
