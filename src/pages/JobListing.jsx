@@ -106,32 +106,27 @@ const JobListing = () => {
       />
 
       {/* rende  applications */}
-      {job?.recruiter_id !== user?.id &&(
-        <ApplyJobDrawer 
-        job={job}
-        user={user}
-        fetchJob={fnJob}
-        applied = {job?.applications?.find((app) => app.candidate_id === user.id)}
+      {job?.recruiter_id !== user?.id && (
+        <ApplyJobDrawer
+          job={job}
+          user={user}
+          fetchJob={fnJob}
+          applied={job?.applications?.find(
+            (app) => app.candidate_id === user.id
+          )}
         />
       )}
 
-      {
-        job?.applications?.length > 0 &&  job?.recruiter_id === user?.id && (
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl sm:text-3xl font-bold ">Applications</h2>
-            {
-              job?.applications.map((application)=>{
-                return (
-                  <ApplicationCard 
-                  key={application.id}
-                  application={application}
-                  />
-                )
-              })
-            }
-          </div>
-        )
-      }
+      {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
+        <div className="flex flex-col gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold ">Applications</h2>
+          {job?.applications.map((application) => {
+            return (
+              <ApplicationCard key={application.id} application={application} />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
