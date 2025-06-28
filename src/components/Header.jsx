@@ -53,12 +53,12 @@ const Header = () => {
                 <UserButton.Link
                   label="My Jobs"
                   labelIcon={<BriefcaseBusiness size={15} />}
-                  href="myjobs"
+                  href="/myjobs"
                 />
                 <UserButton.Link
                   label="Saved Jobs"
                   labelIcon={<Heart size={15} />}
-                  href="savedjobs"
+                  href="/savedjobs"
                 />
               </UserButton.MenuItems>
             </UserButton>
