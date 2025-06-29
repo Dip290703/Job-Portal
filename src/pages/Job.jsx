@@ -54,7 +54,7 @@ const Job = () => {
     setSearchQuery("");
     setLocation("");
     setCompany_id("");
-  }
+  };
 
   if (!isLoaded) {
     return <BarLoader className="mb-4 " width={"100%"} color="#36d7b7" />;
@@ -117,7 +117,13 @@ const Job = () => {
           </SelectContent>
         </Select>
 
-        <Button onClick={clearFilters} variant="destructive" className=" sm:w-1/3">Clear Filters</Button>
+        <Button
+          onClick={clearFilters}
+          variant="destructive"
+          className=" sm:w-1/3"
+        >
+          Clear Filters
+        </Button>
       </div>
 
       {loadingJobs && (
