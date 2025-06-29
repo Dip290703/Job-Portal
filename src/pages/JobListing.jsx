@@ -106,7 +106,7 @@ const JobListing = () => {
       />
 
       {/* rende  applications */}
-      {job?.recruiter_id !== user?.id && (
+      {user?.unsafeMetadata?.role !== "Recruiter" && (
         <ApplyJobDrawer
           job={job}
           user={user}
@@ -117,7 +117,7 @@ const JobListing = () => {
         />
       )}
 
-      {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
+      {job?.applications?.length > 0 && user?.unsafeMetadata?.role === "Recruiter" && (
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl sm:text-3xl font-bold ">Applications</h2>
           {job?.applications.map((application) => {
